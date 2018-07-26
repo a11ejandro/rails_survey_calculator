@@ -14,4 +14,5 @@ RUN bundle install --binstubs
 
 COPY . .
 
+ENTRYPOINT ["ruby", "contrib/docker/entry.rb"]
 CMD ["puma", "-C", "config/puma.rb", "-e", "production"]
