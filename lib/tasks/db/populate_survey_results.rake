@@ -4,7 +4,7 @@ namespace :db do
   desc 'Generates 100000 survey results'
   task populate_survey_results: :environment do
     records = []
-    100_000.times do |time|
+    (1..100_000).each do |time|
       value = rand(1000)
       sr = { value: value }
 
