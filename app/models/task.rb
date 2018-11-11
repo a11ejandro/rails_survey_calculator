@@ -1,6 +1,8 @@
 class Task < ApplicationRecord
   after_create :process_in_background
 
+  has_many :statistics
+
   private
 
   def process_in_background
