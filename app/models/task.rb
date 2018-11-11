@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-  after_create :process_in_background
+  after_commit :process_in_background, on: :create
 
   has_many :statistics
 
